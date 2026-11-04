@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nova Admin - Login">
+    <title>Nova Admin - Login</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Admin Login Container -->
+    <div class="admin-login-container" style="max-width: 400px; margin: 5rem auto; padding: 2rem; background: var(--white); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <i class="fas fa-shield-alt" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+            <h2 style="color: var(--text-center); margin-bottom: 0.5rem;">Admin Login</h2>
+            <p style="color: var(--light-text);">Manage website content</p>
+        </div>
+
+        <form id="adminLoginForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; flex-direction: column;">
+                <label style="font-size: 0.9rem; margin-bottom: 0.5rem;">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required 
+                    style="padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; margin-bottom: 1rem;">
+            </div>
+
+            <div style="display: flex; flex-direction: column;">
+                <label style="font-size: 0.9rem; margin-bottom: 0.5rem;">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required
+                    style="padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; padding: 0.8rem 1.5rem;">Login</button>
+
+            <div id="loginResponse" style="margin-top: 1rem; padding: 0.8rem; border-radius: 4px; display: none;"></div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('adminLoginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const responseDiv = document.getElementById('loginResponse');
+            
+            // Simple hardcoded credentials for demo
+            const validUsername = 'admin';
+            const validPassword = 'password123';
+            
+            if (username === validUsername && password === validPassword) {
+                // In a real application, would redirect to admin dashboard
+                responseDiv.style.background = '#d1f9c4';
+                responseDiv.style.color = '#059669';
+                responseDiv.style.display = 'block';
+                responseDiv.textContent = 'Login successful! Redirecting...';
+                setTimeout(() => {
+                    window.location.href = 'admin-dashboard.html';
+                }, 2000);
+            } else {
+                responseDiv.style.background = '#fee2e2';
+                responseDiv.style.color = '#dc2626';
+                responseDiv.style.display = 'block';
+                responseDiv.textContent = 'Invalid credentials. Please try again.';
+            }
+        });
+    </script>
+
+</body>
+</html>

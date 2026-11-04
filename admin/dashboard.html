@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Admin - Dashboard</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="admin-sidebar" style="width: 250px; background: var(--primary-color); height: 100vh; position: fixed; top: 0; left: 0; padding-top: 2rem;">
+        <div style="padding: 0 1.5rem 1.5rem;">
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 1.5rem;">Nova Admin</div>
+            <nav>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 1rem;">
+                        <a href="admin-dashboard.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-tachometer-alt" style="color: var(--white);"></i>
+                            <span style="color: rgba(255,255,255,0.8);">Dashboard</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <a href="admin-services.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-wrench" style="color: var(--white);"></i>
+                            <span style="color: rgba(255,255,255,0.8);">Services</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <a href="admin-projects.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-project-diagram" style="color: var(--white);"></i>
+                            <span style="color: rgba(255,255,255,0.8);">Projects</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <a href="admin-content.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-edit" style="color: var(--white);"></i>
+                            <span style="color: rgba(255,255,255,0.8);">Content</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <a href="admin-users.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-users" style="color: var(--white);"></i>
+                            <span style="color: rgba(255,255,255,0.8);">Users</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="admin-main" style="margin-left: 250px; padding: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h2 style="color: var(--text-center);">Dashboard</h2>
+            <div style="display: flex; gap: 1rem;">
+                <a href="admin-logout.php" style="color: var(--primary-color); text-decoration: none; font-size: 0.85rem;">
+                    <i class="fas fa-sign-out"></i> Logout
+                </a>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+            <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow); text-align: center;">
+                <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">12</div>
+                <div style="color: var(--light-text);">Active Services</div>
+            </div>
+            <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow); text-align: center;">
+                <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">47</div>
+                <div style="color: var(--light-text);">Total Projects</div>
+            </div>
+            <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow); text-align: center;">
+                <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">2,842</div>
+                <div style="color: var(--light-text);">Monthly Visitors</div>
+            </div>
+            <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow); text-align: center;">
+                <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">98%</div>
+                <div style="color: var(--light-text);">Uptime</div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow);">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Recent Activity</h3>
+            <div style="max-height: 300px; overflow-y: auto;">
+                <p style="color: var(--light-text); font-size: 0.85rem; padding: 0.5rem 0;">No recent activity</p>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow); margin-top: 2rem;">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Quick Actions</h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                <a href="admin-services.html" style="background: var(--background); padding: 1rem; border-radius: 4px; text-align: center; color: var(--text-color); display: block;">
+                    <i class="fas fa-wrench" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                    <span>Manage Services</span>
+                </a>
+                <a href="admin-projects.html" style="background: var(--background); padding: 1rem; border-radius: 4px; text-align: center; color: var(--text-color); display: block;">
+                    <i class="fas fa-project-diagram" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                    <span>Manage Projects</span>
+                </a>
+                <a href="admin-content.html" style="background: var(--background); padding: 1rem; border-radius: 4px; text-align: center; color: var(--text-color); display: block;">
+                    <i class="fas fa-edit" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                    <span>Manage Content</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sidebar toggle for mobile
+        const sidebar = document.querySelector('.admin-sidebar');
+        const mainContent = document.querySelector('.admin-main');
+
+        // For mobile responsiveness, add a toggle button
+        const toggleBtn = document.createElement('button');
+        toggleBtn.style.display = 'none';
+        toggleBtn.style.position = 'fixed';
+        toggleBtn.style.top = '1rem';
+        toggleBtn.style.left = '1rem';
+        toggleBtn.style.zIndex = '1000';
+        toggleBtn.style.background = 'var(--primary-color)';
+        toggleBtn.style.color = 'var(--white)';
+        toggleBtn.style.padding = '0.5rem 1rem';
+        toggleBtn.style.border = 'none';
+        toggleBtn.style.borderRadius = '4px';
+        toggleBtn.style.cursor = 'pointer';
+        toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        document.body.insertBefore(toggleBtn, document.body.firstChild);
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+            mainContent.style.marginLeft = mainContent.style.marginLeft === '250px' ? '0' : '250px';
+        });
+
+        // Make sidebar draggable/responsive on mobile
+        function handleResize() {
+            if (window.innerWidth < 768) {
+                sidebar.style.left = '-250px';
+                mainContent.style.marginLeft = '0';
+                toggleBtn.style.display = 'block';
+            } else {
+                sidebar.style.left = '0';
+                mainContent.style.marginLeft = '250px';
+                toggleBtn.style.display = 'none';
+            }
+        }
+        window.addEventListener('resize', handleResize);
+        handleResize();
+    </script>
+
+</body>
+</html>

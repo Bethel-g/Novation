@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Admin - Manage Content</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="admin-sidebar" style="width: 250px; background: var(--primary-color); height: 100vh; position: fixed; top: 0; left: 0; padding-top: 2rem;">
+        <div style="padding: 0 1.5rem 1.5rem;">
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 1.5rem;">Nova Admin</div>
+            <nav>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 1rem;">
+                        <a href="admin-dashboard.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-tachometer-alt" style="color: var(--white);"></i>
+                            <span style="color: rgba(255,255,255,0.8);">Dashboard</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <a href="admin-services.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-wrench" style="color: rgba(255,255,255,0.8);"></i>
+                            <span style="color: rgba(255,255,255,0.8);">Services</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <a href="admin-projects.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-project-diagram" style="color: rgba(255,255,255,0.8);"></i>
+                            <span style="color: rgba(255,255,255,0.8);">Projects</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1rem; class="active">
+                        <a href="admin-content.html" style="color: var(--white); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-edit" style="color: var(--white);"></i>
+                            <span style="color: var(--white);">Content</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <a href="admin-logout.php" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-sign-out" style="color: var(--white);"></i>
+                            <span style="color: rgba(255,255,255,0.8);">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="admin-main" style="margin-left: 250px; padding: 2rem; padding-top: 4rem;">
+        <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Manage Website Content</h2>
+            <p style="color: var(--light-text);">Update general website content without developer support</p>
+        </div>
+
+        <!-- Company Info Form -->
+        <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow); margin-bottom: 2rem;">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Company Information</h3>
+            <form style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div>
+                        <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Company Name</label>
+                        <input type="text" value="Nova Technology Company" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+                    </div>
+                    <div>
+                        <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Tagline</label>
+                        <input type="text" placeholder="Your tagline here" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+                    </div>
+                </div>
+                <div>
+                    <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Mission Statement</label>
+                    <textarea rows="3" placeholder="Your mission statement..." style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem; resize: vertical;"></textarea>
+                </div>
+                <div>
+                    <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Vision Statement</label>
+                    <textarea rows="3" placeholder="Your vision statement..." style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Save Changes</button>
+            </form>
+        </div>
+
+        <!-- Contact Info Form -->
+        <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow); margin-bottom: 2rem;">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Contact Information</h3>
+            <form style="display: flex; flex-direction: column; gap: 1rem;">
+                <div>
+                    <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Phone Number</label>
+                    <input type="tel" placeholder="+1 (555) 123-4567" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+                </div>
+                <div>
+                    <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Email Address</label>
+                    <input type="email" placeholder="info@nova-tech.com" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+                </div>
+                <div>
+                    <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Physical Address</label>
+                    <textarea rows="2" placeholder="123 Tech Plaza, Silicon Valley, CA" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Save Changes</button>
+            </form>
+        </div>
+
+        <!-- Homepage Content -->
+        <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow);">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Homepage Content</h3>
+            <form style="display: flex; flex-direction: column; gap: 1rem;">
+                <div>
+                    <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Hero Headline</label>
+                    <input type="text" placeholder="Innovative Technology Solutions" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+                </div>
+                <div>
+                    <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Hero Description</label>
+                    <textarea rows="2" placeholder="We deliver cutting-edge digital transformation..." style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Activate current menu item
+        document.querySelectorAll('.admin-sidebar a').forEach(link => {
+            if (link.getAttribute('href') === 'admin-content.html') {
+                link.style.color = 'var(--white)';
+            }
+        });
+    </script>
+
+</body>
+</html>

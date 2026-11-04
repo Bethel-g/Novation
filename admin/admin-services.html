@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Admin - Manage Services</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="admin-sidebar" style="width: 250px; background: var(--primary-color); height: 100vh; position: fixed; top: 0; left: 0; padding-top: 2rem;">
+        <div style="padding: 0 1.5rem 1.5rem;">
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 1.5rem;">Nova Admin</div>
+            <nav>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 1rem;">
+                        <a href="admin-dashboard.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-tachometer-alt" style="color: var(--white);"></i>
+                            <span style="color: rgba(255,255,255,0.8);">Dashboard</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1rem; class="active">
+                        <a href="admin-services.html" style="color: var(--white); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-wrench" style="color: var(--white);"></i>
+                            <span style="color: var(--white);">Services</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <a href="admin-projects.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-project-diagram" style="color: var(--white);"></i>
+                            <span style="color: rgba(255,255,255,0.8);">Projects</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <a href="admin-content.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-edit" style="color: var(--white);"></i>
+                            <span style="color: rgba(255,255,255,0.8);">Content</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <a href="admin-logout.php" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; display: flex; align-items: gap; padding: 0.5rem 1rem; border-radius: 4px;">
+                            <i class="fas fa-sign-out" style="color: var(--white);"></i>
+                            <span style="color: rgba(255,255,255,0.8);">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="admin-main" style="margin-left: 250px; padding: 2rem; padding-top: 4rem;">
+        <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Manage Services</h2>
+            <p style="color: var(--light-text);">Add, edit, or delete services for the website</p>
+        </div>
+
+        <!-- Add New Service Form -->
+        <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow); margin-bottom: 2rem;">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Add New Service</h3>
+            <form style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div>
+                        <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Service Title</label>
+                        <input type="text" placeholder="e.g. Custom Software Development" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+                    </div>
+                    <div>
+                        <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Category</label>
+                        <input type="text" placeholder="e.g. Development" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+                    </div>
+                </div>
+                <div>
+                    <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Description</label>
+                    <textarea rows="3" placeholder="Describe the service..." style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem; resize: vertical;"></textarea>
+                </div>
+                <div>
+                    <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Icon (Font Awesome class)</label>
+                    <input type="text" placeholder="e.g. fa-code" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+                </div>
+                <div>
+                    <label style="font-size: 0.85rem; margin-bottom: 0.5rem;">Estimated Price</label>
+                    <input type="number" placeholder="e.g. 5000" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+                </div>
+                <button type="submit" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Add Service</button>
+            </form>
+        </div>
+
+        <!-- Services Table -->
+        <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow);">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Existing Services</h3>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background: var(--primary-color); color: var(--white);">
+                            <th style="padding: 0.5rem; text-align: left;">#</th>
+                            <th style="padding: 0.5rem; text-align: left;">Service</th>
+                            <th style="padding: 0.5rem; text-align: left;">Icon</th>
+                            <th style="padding: 0.5rem; text-align: left;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.5rem;">1</td>
+                            <td style="padding: 0.5rem;">Custom Software Development</td>
+                            <td style="padding: 0.5rem;"><i class="fas fa-code" style="color: var(--primary-color);"></i></td>
+                            <td style="padding: 0.5rem;">
+                                <a href="#" style="color: var(--primary-color); margin-right: 0.5rem;">Edit</a>
+                                <a href="#" style="color: #dc3545;">Delete</a>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.5rem;">2</td>
+                            <td style="padding: 0.5rem;">Cloud & Infrastructure</td>
+                            <td style="padding: 0.5rem;"><i class="fas fa-cloud" style="color: var(--primary-color);"></i></td>
+                            <td style="padding: 0.5rem;">
+                                <a href="#" style="color: var(--primary-color); margin-right: 0.5rem;">Edit</a>
+                                <a href="#" style="color: #dc3545;">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Activate current menu item
+        document.querySelectorAll('.admin-sidebar a').forEach(link => {
+            if (link.getAttribute('href') === 'admin-services.html') {
+                link.style.color = 'var(--white)';
+            }
+        });
+    </script>
+
+</body>
+</html>

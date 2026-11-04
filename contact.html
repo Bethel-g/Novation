@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nova - Contact - Technology Company">
+    <title>Nova - Contact Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-bolt"></i> Nova
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="#contact" class="btn-primary">Get in Touch</a>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact" style="padding: 7rem 2rem; background: var(--white);">
+        <div class="contact-container" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+            
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+                </div>
+                <div class="contact-details" style="margin-top: 2rem;">
+                    <div class="contact-item" style="margin-bottom: 1.5rem;">
+                        <i class="fas fa-map-marker-alt" style="color: var(--primary-color); font-size: 1.2rem; margin-top: 0.2rem;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 0.3rem;">Address</h4>
+                            <p style="font-size: 0.9rem; color: var(--light-text);">123 Tech Plaza, Silicon Valley, CA 94000, USA</p>
+                        </div>
+                    </div>
+                    <div class="contact-item" style="margin-bottom: 1.5rem;">
+                        <i class="fas fa-phone" style="color: var(--primary-color); font-size: 1.2rem; margin-top: 0.2rem;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 0.3rem;">Phone</h4>
+                            <p style="font-size: 0.9rem; color: var(--light-text);">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item" style="margin-bottom: 1.5rem;">
+                        <i class="fas fa-envelope" style="color: var(--primary-color); font-size: 1.2rem; margin-top: 0.2rem;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 0.3rem;">Email</h4>
+                            <p style="font-size: 0.9rem; color: var(--light-text);">info@nova-tech.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links" style="margin-top: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">Follow Us</h4>
+                    <div class="social-icons" style="display: flex; gap: 1rem;">
+                        <a href="#" class="social-icon" style="width: 44px; height: 44px; background: var(--background); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-color); transition: var(--transition);">
+                            <i class="fab fa-facebook-f" style="font-size: 1.2rem;"></i>
+                        </a>
+                        <a href="#" class="social-icon" style="width: 44px; height: 44px; background: var(--background); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-color); transition: var(--transition);">
+                            <i class="fab fa-twitter-x" style="font-size: 1.2rem;"></i>
+                        </a>
+                        <a href="#" class="social-icon" style="width: 44px; height: 44px; background: var(--background); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-color); transition: var(--transition);">
+                            <i class="fab fa-linkedin-in" style="font-size: 1.2rem;"></i>
+                        </a>
+                        <a href="#" class="social-icon" style="width: 44px; height: 44px; background: var(--background); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-color); transition: var(--transition);">
+                            <i class="fab fa-github" style="font-size: 1.2rem;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contact-form" style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+                <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 1.3rem;">Send Us a Message</h3>
+                <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.2rem;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Full Name" required style="padding: 0.9rem 1rem; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email Address" required style="padding: 0.9rem 1rem; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number (optional)" style="padding: 0.9rem 1rem; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required style="padding: 0.9rem 1rem; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Message" required style="padding: 0.9rem 1rem; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; font-size: 0.95rem; min-height: 160px; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="padding: 0.8rem 1.5rem; align-self: flex-start; font-weight: 500;">Send Message</button>
+                </form>
+                <div id="formResponse" style="margin-top: 1rem; padding: 0.8rem; border-radius: 8px; display: none; font-size: 0.9rem;"></div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section style="padding: 5rem 2rem; background: var(--light-bg);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Visit Us</h3>
+            <p style="color: var(--light-text); margin-bottom: 2rem; max-width: 600px; margin: 0 auto;">We'd love to meet you in person. Feel free to visit our office during business hours.</p>
+            <div style="width: 100%; max-width: 600px; margin: 0 auto;">
+                <div style="height: 350px; background: #f1f5f9; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--light-text); font-size: 1rem;">
+                    <i class="fas fa-map-marker-alt" style="font-size: 3rem; margin-right: 1rem; color: var(--primary-color);"></i>
+                    Interactive Map Placeholder
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="margin-top: 0;">
+        <div class="footer-content" style="padding: 2rem 0;">
+            <div class="footer-content" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+                <div class="footer-logo" style="margin: 0 auto 1rem; font-size: 1.5rem; color: var(--primary-color);">
+                    <i class="fas fa-bolt"></i> Nova
+                </div>
+                <p style="color: var(--light-text);">2024 Nova Technology Company. All rights reserved.</p>
+                <div style="margin-top: 1rem; justify-content: center;">
+                    <a href="#" class="social-link" style="margin: 0 0.5rem;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link" style="margin: 0 0.5rem;"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" style="margin: 0 0.5rem;"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
