@@ -6,12 +6,14 @@
     <meta name="description" content="Nova - About Us - Technology Company">
     <title>Nova - About Us</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="logo">
             <i class="fas fa-bolt"></i> Nova
         </div>
@@ -27,72 +29,57 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
-            <h1>About Nova</h1>
-            <p>Learn more about our company, mission, and values</p>
-        </div>
-    </header>
-
     <!-- About Section -->
-    <section class="about" style="padding: 7rem 2rem; background: var(--white);">
-        <div class="about-container" style="max-width: 1200px; margin: 0 auto;">
-            <div class="about-image" style="text-align: center; margin-bottom: 4rem;">
-                <div class="about-photo" style="width: 100%; max-width: 550px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
-                    <img src="images/team.jpg" alt="Nova Team" style="width: 100%; height: auto; display: block;">
+    <section class="about" style="padding: 6rem 2rem;">
+        <div class="about-container" style="max-width: 1300px; margin: 0 auto;">
+            <div class="about-image" style="animation: photoIn 1s var(--transition-normal) forwards;">
+                <div class="about-photo">
+                    <img src="images/team.jpg" alt="Nova Team">
                 </div>
             </div>
-            <div class="about-content" style="max-width: 850px; margin: 0 auto;">
-                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
-                    <h2 style="color: var(--primary-color); margin-bottom: 0.8rem;">Our Story</h2>
-                    <p style="color: var(--light-text); font-size: 1.1rem;">Founded in 2015, Nova has grown to become a trusted partner for businesses seeking innovative technology solutions.</p>
+            <div class="about-content" style="animation: fadeIn 1s var(--transition-normal) forwards; animation-delay: 0.3s;">
+                <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="background: linear-gradient(135deg, var(--primary-dark), var(--text-primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Our Story</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.1rem;">Founded in 2015, Nova has grown to become a trusted partner for businesses seeking innovative technology solutions.</p>
                 </div>
                 <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8;">
-                    Nova Technology was founded with a simple mission: to empower businesses through cutting-edge technology and innovative solutions. What started as a small team of passionate developers in a garage has grown into a full-service technology company serving clients across industries worldwide. Our headquarters are located in the heart of Silicon Valley, with additional offices in New York and London.
+                    Nova Technology was founded with a simple mission: to empower businesses through cutting-edge technology and innovative solutions. What started as a small team of passionate developers has grown into a full-service technology company serving clients across industries worldwide. Our headquarters are located in the heart of Silicon Valley, with additional offices in New York and London.
                 </p>
                 
-                <div class="mission-vision" style="margin: 2rem 0; padding: 2rem; background: var(--light-bg); border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div class="mission-vision" style="margin: 2rem 0; padding: 2rem; background: var(--white); border-radius: 20px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md); opacity: 0; animation: fadeIn 0.8s var(--transition-normal) forwards; animation-delay: 0.1s;">
                     <div class="mission" style="margin-bottom: 1.5rem;">
-                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Our Mission</h3>
-                        <p style="color: var(--light-text); line-height: 1.6;">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 1rem; font-size: 1.3rem;">Our Mission</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
                             To empower businesses through technology innovation, delivering scalable solutions that drive growth and efficiency while maintaining the highest standards of quality and security. We believe technology should be an enabler, not a barrier, and we strive to build long-term partnerships with our clients.
                         </p>
                     </div>
                     <div class="vision">
-                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Our Vision</h3>
-                        <p style="color: var(--light-text); line-height: 1.6;">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 1rem; font-size: 1.3rem;">Our Vision</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
                             To be the leading technology partner globally, recognized for transforming businesses through cutting-edge digital solutions and exceptional customer success. We envision a world where every business can leverage technology to achieve its full potential.
                         </p>
                     </div>
                 </div>
                 
-                <div class="values" style="margin-top: 3rem;">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Our Values</h3>
-                    <div class="values-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
-                        <div class="value-item" style="padding: 1.5rem; background: var(--white); border-radius: 12px; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; transition: transform 0.3s;">
-                            <i class="fas fa-star" style="width: 40px; height: 40px; background: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; color: #f59e0b;"></i>
-                            <h4 style="margin-bottom: 0.5rem;">Excellence</h4>
-                            <p style="color: var(--light-text); font-size: 0.85rem;">We deliver the highest quality in everything we do.</p>
+                <div class="values" style="margin-top: 3rem; opacity: 0; animation: fadeIn 0.8s var(--transition-normal) forwards; animation-delay: 0.2s;">
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: var(--primary-dark);">Our Values</h3>
+                    <div class="values-grid">
+                        <div class="value-item" style="animation: fadeIn 0.8s var(--transition-normal) forwards; animation-delay: 0.1s;">
+                            <i class="fas fa-star"></i>
+                            <h4>Excellence</h4>
+                            <p>We deliver the highest quality in everything we do.</p>
                         </div>
-                        <div class="value-item" style="padding: 1.5rem; background: var(--white); border-radius: 12px; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; transition: transform 0.3s;">
-                            <i class="fas fa-handshake" style="width: 40px; height: 40px; background: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; color: #10b981;"></i>
-                            <h4 style="margin-bottom: 0.5rem;">Integrity</h4>
-                            <p style="color: var(--light-text); font-size: 0.85rem;">We build trust through transparency and honesty.</p>
+                        <div class="value-item" style="animation: fadeIn 0.8s var(--transition-normal) forwards; animation-delay: 0.2s;">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Integrity</h4>
+                            <p>We build trust through transparency and honesty.</p>
                         </div>
-                        <div class="value-item" style="padding: 1.5rem; background: var(--white); border-radius: 12px; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; transition: transform 0.3s;">
-                            <i class="fas fa-lightbulb" style="width: 40px; height: 40px; background: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; color: #8b5cf6;"></i>
-                            <h4 style="margin-bottom: 0.5rem;">Innovation</h4>
-                            <p style="color: var(--light-text); font-size: 0.85rem;">We constantly explore new technologies and approaches.</p>
+                        <div class="value-item" style="animation: fadeIn 0.8s var(--transition-normal) forwards; animation-delay: 0.3s;">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Innovation</h4>
+                            <p>We constantly explore new technologies and approaches.</p>
                         </div>
                     </div>
-                </div>
-                
-                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Team Expertise</h3>
-                    <p style="color: var(--light-text); font-size: 1rem;">
-                        Our team comprises 50+ skilled professionals with expertise in software development, cloud architecture, UI/UX design, and digital strategy. We continuously invest in our team's growth and stay current with the latest technology trends. Our leadership team has an average of 10+ years of experience in the technology sector, with a proven track record of delivering successful projects across finance, healthcare, e-commerce, and education sectors.
-                    </p>
                 </div>
             </div>
         </div>
@@ -101,7 +88,7 @@
     <!-- Footer -->
     <footer style="margin-top: 0;">
         <div class="footer-content" style="padding: 2rem 0;">
-            <div class="footer-content" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <div class="footer-content" style="max-width: 1300px; margin: 0 auto; text-align: center;">
                 <div class="footer-logo" style="margin: 0 auto 1rem; font-size: 1.5rem; color: var(--primary-color);">
                     <i class="fas fa-bolt"></i> Nova
                 </div>

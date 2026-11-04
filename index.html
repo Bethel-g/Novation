@@ -7,12 +7,14 @@
     <meta name="keywords" content="technology, company, services, projects, innovation">
     <title>Nova - Technology Company</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="logo">
             <i class="fas fa-bolt"></i> Nova
         </div>
@@ -30,19 +32,24 @@
 
     <!-- Hero Section -->
     <header class="hero" id="home">
+        <div class="tech-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
         <div class="hero-content">
             <h1>Innovative Technology Solutions</h1>
             <p>We deliver cutting-edge digital transformation and technology services for businesses worldwide. Partner with us to elevate your digital presence.</p>
-            <div class="hero-buttons">
+            <div class="btn-group">
                 <a href="#services" class="btn-secondary">Explore Our Services</a>
                 <a href="#contact" class="btn-primary">Get a Consultation</a>
             </div>
         </div>
+        
         <div class="hero-image">
-            <div class="tech-pattern">
-                <div class="pattern-layer"></div>
-                <div class="pattern-layer"></div>
-                <div class="pattern-layer"></div>
+            <div class="profile-img">
+                <img src="images/hero-bg.jpg" alt="Nova Team">
             </div>
         </div>
     </header>
@@ -159,7 +166,7 @@
                         <p>To be the leading technology partner globally, recognized for transforming businesses through cutting-edge digital solutions and exceptional customer success.</p>
                     </div>
                 </div>
-                <div class="values" style="margin-top: 2rem;">
+                <div class="values" style="margin-top: 3rem;">
                     <h3>Our Values</h3>
                     <div class="values-grid">
                         <div class="value-item">
@@ -242,7 +249,7 @@
                     <div class="form-group">
                         <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
                     </div>
-                    <button type="submit" class="btn-primary w-full">Send Message</button>
+                    <button type="submit" class="btn-primary">Send Message</button>
                 </form>
                 <div id="formResponse"></div>
             </div>
@@ -252,22 +259,38 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">
-                <i class="fas fa-bolt"></i> Nova
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <i class="fas fa-bolt"></i> Nova
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter-x"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="footer-bottom">
             <p>2024 Nova Technology Company. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="footer-social">
-                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-            </div>
         </div>
     </footer>
 
