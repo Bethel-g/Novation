@@ -1101,10 +1101,11 @@ footer {
 }
 
 .footer-logo i {
-    background: linear-gradient(135deg, #10b981, #f59e0b);
+    background: var(--gradient-purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.4));
 }
 
 .footer-links h4 {
@@ -1178,6 +1179,9 @@ footer {
     color: var(--text-light);
     font-size: 0.85rem;
     text-align: center;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    background: linear-gradient(180deg, rgba(139, 92, 246, 0.1) 0%, var(--primary-dark) 100%);
 }
 
 /* ==========================================
